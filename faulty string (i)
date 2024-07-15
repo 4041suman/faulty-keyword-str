@@ -1,0 +1,19 @@
+class Solution {
+    public String finalString(String s) {
+        String ans="";
+        String ans2="";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!='i'){
+                ans += s.charAt(i);
+            }
+            else{
+                for(int j=ans.length()-1;j>=0;j--){
+                    ans2 +=ans.charAt(j);
+                }
+                ans=ans2;
+                ans2="";
+            }
+        }
+        return ans;
+    }
+}
